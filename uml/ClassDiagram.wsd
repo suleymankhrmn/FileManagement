@@ -1,9 +1,63 @@
 @startuml class Diagram
+Company "1" - "*" User
+Company "1" - "*" Organization
+Organization "1" - "*" Section
+Organization "1" - "*" User
+Section "1" - "*" User
+User "*" - "1" Role
+
+
 class User{
-    String recorId;
-    String name;
-    String surname;
-    String username;
-    String password;
+    String recordId
+    String name
+    String surname
+    String username
+    String password
+    Date createDate
+    Date updateDate
+    String createByUsername
+    Company company
 }
+
+
+class Company{
+    String recordId
+    String formattedName
+    User[] users
+}
+
+class Organization{
+    String recordId
+    String name
+    User[] users
+}
+
+class Section{
+    String recordId
+    String name
+    User[] users
+}
+
+class Role{
+    String recordId
+    String name
+
+}
+
+class File{
+    String recordId
+    String name
+    String path
+    Boolean isShared
+    Boolean isPersonal
+    Organization organization
+    Section section
+    User createBy
+    String createAt
+    String updateAt
+}
+
+
+database 
+
 @enduml
