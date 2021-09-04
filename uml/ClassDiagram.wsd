@@ -13,10 +13,13 @@ class User{
     String surname
     String username
     String password
-    Date createDate
-    Date updateDate
+    Date createAt
+    Date updateAt
     String createByUsername
     Company company
+    Organization organization
+    Section section
+    Role role
 }
 
 
@@ -24,24 +27,33 @@ class Company{
     String recordId
     String formattedName
     User[] users
+    Organization[] organization
+    Date createAt
+    Date updateAt
 }
 
 class Organization{
     String recordId
     String name
     User[] users
+    Company company
+    Date createAt
+    Date updateAt
 }
 
 class Section{
     String recordId
     String name
     User[] users
+    Organization organization
+    Company company
+    Date createAt
+    Date updateAt
 }
 
 class Role{
     String recordId
     String name
-
 }
 
 class File{
@@ -50,14 +62,12 @@ class File{
     String path
     Boolean isShared
     Boolean isPersonal
+    Company company
     Organization organization
     Section section
     User createBy
     String createAt
     String updateAt
-}
-
-
-database 
+} 
 
 @enduml
