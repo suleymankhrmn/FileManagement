@@ -1,0 +1,23 @@
+{
+  "name": "filemanagement",
+  "version": "1.0.0",
+  "description": "File Management Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suleymankhrmn/FileManagement.git"
+  },
+  "author": "Kahraman Brothers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/suleymankhrmn/FileManagement/issues"
+  },
+  "homepage": "https://github.com/suleymankhrmn/FileManagement#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
