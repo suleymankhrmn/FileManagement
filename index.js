@@ -1,4 +1,5 @@
 const express = require("express");
+require("./utils/mongooseConnection");
 const app = express();
 const port = 8091;
 
