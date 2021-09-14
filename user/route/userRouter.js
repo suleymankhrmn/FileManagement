@@ -15,4 +15,9 @@ router.get('/:id',async(req,res)=>{
     res.send(await UserService.findById(id))
 })
 
+router.delete('/delete/:id', async (req, res) => {
+    await UserService.delete(req.params.id)
+    res.send("User Deleted")
+})
+
 module.exports = router
